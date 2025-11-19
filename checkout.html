@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Start VWO Async SmartCode -->
 <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
 <script type='text/javascript' id='vwoCode'>
@@ -20,64 +19,37 @@ if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')|
 <!-- End VWO Async SmartCode -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <title>Checkout Page</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .product { border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
-        .product img { width: 100%; border-radius: 8px; }
-        button { padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #0056b3; }
+        form { max-width: 500px; }
+        input { width: 100%; padding: 10px; margin: 10px 0; }
+        .summary { margin-top: 30px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
+        .place-order { margin-top: 20px; padding: 15px; background: #ff6f00; color: white; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 18px; }
     </style>
 </head>
 <body>
+<h1>Checkout</h1>
+<form>
+    <h2>Shipping Information</h2>
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Address" required>
+    <input type="text" placeholder="City" required>
+    <input type="text" placeholder="Postal Code" required>
 
-<h1>Products</h1>
+    <h2>Payment Information</h2>
+    <input type="text" placeholder="Card Number" required>
+    <input type="text" placeholder="MM/YY" required>
+    <input type="text" placeholder="CVV" required>
+</form>
 
-<div class="grid">
-    <!-- Repeat for 6 products -->
-    <div class="product">
-        <img src="https://via.placeholder.com/250" alt="Product">
-        <h3>Product 1</h3>
-        <p>$19.99</p>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/250" alt="Product">
-        <h3>Product 2</h3>
-        <p>$24.99</p>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/250" alt="Product">
-        <h3>Product 3</h3>
-        <p>$14.99</p>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/250" alt="Product">
-        <h3>Product 4</h3>
-        <p>$29.99</p>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/250" alt="Product">
-        <h3>Product 5</h3>
-        <p>$39.99</p>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/250" alt="Product">
-        <h3>Product 6</h3>
-        <p>$9.99</p>
-        <button>Add to Cart</button>
-    </div>
+<div class="summary">
+    <h2>Order Summary</h2>
+    <p>Subtotal: $69.97</p>
+    <p>Shipping: $4.99</p>
+    <h3>Total: $74.96</h3>
 </div>
 
+<button class="place-order">Place Order</button>
 </body>
 </html>
